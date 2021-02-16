@@ -1,5 +1,74 @@
-div, h1, h2, h3, p, a, input {
-    padding: 0;
-    margin: 0;
+@import 'reset.scss';
+@import 'mixins.scss';
+@import 'var.scss';
+
+body {
     font-family: 'Josefin Sans', sans-serif;
-} 
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.container {
+    background: url('../img/headerbackground.png') 0 0 no-repeat;
+}
+
+.top__wrapper {
+    @include flex_space-between();
+    padding: 50px 80px;
+}
+.menu{
+    &__list{
+        &-item{
+            display: inline-block;
+            margin-left: 40px;
+            a {
+                color: $maincolor;
+                font-size: 15px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.header{
+    &-title{
+        &__h1{
+            color: black;
+            font-size: 60px;
+            &--bold{
+                font-weight: 700;
+            }
+        }
+        &__text{
+            color:#455A64;
+            font-size: 25px;
+            margin-top: 15px;
+        }
+        &__btn{
+            display: inline-block;
+            color: $maincolor;
+            font-size: 15px;
+            font-weight: 600;
+            background-color: $cyancolor;
+            border: 0px solid;
+            border-radius: 25px;
+            padding:15px 0;
+            width: 180px;
+            text-align: center;
+            margin-top: 55px;
+                &-text{
+                    display: inline-block;
+                    margin-left: 10px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+        }
+    }
+    &-wrapper{
+        @include flex_center();
+        padding: 100px 0 210px 0;
+    }
+}
