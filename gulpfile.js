@@ -80,7 +80,7 @@ function js() {
 function image() {
     return src(path.src.img)
         .pipe(webp({
-            quality: 70
+            quality: 85
         }))
         .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
