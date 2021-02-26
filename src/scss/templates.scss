@@ -1,0 +1,22 @@
+@import 'var.scss';
+%button {
+    display: inline-block;
+    font-family: 'Josefin Sans';
+    color: white;
+    background-color: $cyan-color;
+    border-radius: 3px;
+}
+%heading-bg {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -0.1em;
+        left: 0;
+        right: 0;
+        height: 0.7em;
+        background-color: $h-bg;
+        border: 0px solid;
+        border-radius: 15px;
+    }
+}

@@ -1,6 +1,7 @@
 @import 'reset.scss';
 @import 'mixins.scss';
 @import 'var.scss';
+@import 'templates.scss';
 
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -52,7 +53,7 @@ li {
             color: $maincolor;
             font-size: 15px;
             font-weight: 600;
-            background-color: $cyancolor;
+            background-color: $cyan-color;
             border: 0px solid;
             border-radius: 25px;
             padding:15px 0;
@@ -83,16 +84,16 @@ li {
     }
     &__h2{
         text-transform: uppercase;
-        color: $cyancolor;
+        color: $cyan-color;
         font-size: 8px;
-        background-color: rgba(15, 191, 97, 0.1);
+        @extend %heading-bg;
         width: 45px;
         margin-bottom: 30px;
     }
     &__h3{
         font-weight: 700;
         font-size: 21px;
-        color:#151D41;
+        color: $dark-blue;
         margin-bottom: 30px;
     }
     &__text{
@@ -103,12 +104,9 @@ li {
             }
     }
     &__btn{
-        display: inline-block;
+        @extend %button;
         font-family: 'Montserrat';
         font-size: 11px;
-        color: white;
-        background-color: $cyancolor;
-        border-radius: 3px;
         padding: 20px 40px;
         margin-top: 40px;
     }
@@ -184,7 +182,7 @@ li {
         width: 100%;
         flex-direction: column;
         @include flex_center();
-        color: #151D41;
+        color: $dark-blue;
         text-transform: uppercase;
     }
     &__percent{
@@ -195,5 +193,164 @@ li {
         margin-top: 15px;
         font-weight: 600;
         font-size: 9px;
+    }
+}
+.services{
+    color: $dark-blue;
+    &__h2{
+        font-size: 20px;
+        color: $cyan-color;
+        text-transform: uppercase;
+        @include flex_center();
+        span{
+            @extend %heading-bg;
+        }
+    }
+    &__h3{
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0 auto;
+        margin: 40px 0 90px 0;
+        @include flex_center();
+        span{
+            @extend %heading-bg;
+        }
+    }
+    &__row{
+        @include flex_space-between();
+        margin: 0px 110px;
+    }
+    &__features{
+        width: 445px;
+        padding: 50px 0px 030px 40px;
+        box-shadow: 0px 8px 5px 5px rgba(0, 0, 0, 0.06);
+        &-h4{
+            font-size: 33px;
+            font-weight: 600;
+            margin-top: 35px;
+        }
+        &-text{
+            margin-top: 40px;
+            width: 355px;
+            line-height: 1.5em;
+        }
+        &-btn{
+            @extend %button;
+            margin-top: 75px;
+            padding: 15px 20px;
+            font-size: 16px;
+            &--white{
+                background-color: white;
+            }
+        }
+        &-link{
+            color: white;
+            margin-right: 8px;
+            &--dark{
+                color: $dark-blue;
+            }
+        }
+        &--cyan{
+            background-color: $cyan-color;
+            color: white;
+        }
+    }
+    &__expertise{
+        width: 525px;
+        box-shadow: 0px 8px 5px 5px rgba(0, 0, 0, 0.06);
+        padding: 35px;
+        background-color: white;
+        &-percent{
+            font-size: 45px;
+            font-weight: 700;
+        }
+        &-title{
+            font-size: 27px;
+            font-weight: 600;
+            margin: 25px 0 20px 0;
+        }
+        &--dottedbg{
+            position: relative;
+            z-index: 2;
+            margin-left: 80px;
+        }
+    }
+    &__tods{
+        position: relative;
+        top: 72px;
+        right: 235px;
+    }
+    &__btn{
+        display: block;
+        @extend %button;
+        padding: 20px 0;
+        width: 165px;
+        text-align: center;
+        margin: 90px auto;
+        &-link{
+            color: white;
+            font-weight: 600;
+        }
+    }
+}
+.portfolio{
+    &__h2{
+        @include flex_center();
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $cyan-color;
+        span{
+            @extend %heading-bg;
+        }
+    }
+    &__h3{
+        @include flex_center();
+        margin-top: 15px;
+        font-size: 40px;
+        font-weight: 600;
+        span{
+            @extend %heading-bg;
+        }
+    }
+    &__examples{
+        @include flex_space-between();
+        margin: 85px 80px 0 80px;
+        &-hover{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background:rgba(39, 222, 191, 0.7);
+            display: none;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+        &-content{
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            @include flex_center();
+        }
+        &-text{
+            font-size: 25px;
+            color: white;
+        }
+        &-offer{
+            position:relative;
+            &:hover .portfolio__examples-hover{
+                display: block;
+            }
+        }
+    }
+    &__btn{
+        @extend %button;
+        text-align: center;
+        display: block;
+        font-size: 25px;
+        padding: 25px 0;
+        width: 230px;
+        margin: 80px auto;
     }
 }
