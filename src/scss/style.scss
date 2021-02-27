@@ -180,8 +180,7 @@ li {
         transform: rotate(-45deg);
         height: 100%;
         width: 100%;
-        flex-direction: column;
-        @include flex_center();
+        @include flex_column();
         color: $dark-blue;
         text-transform: uppercase;
     }
@@ -352,5 +351,78 @@ li {
         padding: 25px 0;
         width: 230px;
         margin: 80px auto;
+    }
+}
+.testimonials{
+    background: url('../img/testimonialsbg.png') 0 0 no-repeat;
+    @include flex_column();
+    font-weight: 600;
+    &__h2{
+        @extend %heading-bg;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $cyan-color;
+        margin-top: 50px;
+    }
+    &__h3{
+        @extend %heading-bg;
+        font-size: 40px;
+        margin-top: 15px;
+    }
+    &__lines{
+        width: 20px;
+        height: 45px;
+        border-left: 8px $cyan-color solid;
+        border-right: 8px $cyan-color solid;
+        margin: 50px 0 40px 0;
+    }
+    &__text, &__name, &__job{
+        color: $dark-blue;
+    }
+    &__text{
+        font-size: 16px;
+        width: 820px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__name{
+        font-size: 30px;
+    }
+    &__job{
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    &__tods{
+        @include flex_center();
+        &-element{
+            border: solid;
+            border-radius: 50%;
+            margin-left: 5px;
+            margin-top: 40px;
+            &--active{
+                border-color: $cyan-color;
+            }
+        }
+    }
+    &__img{
+        @include flex_center();
+        margin-top: 20px;
+        &-element{
+            position: relative;
+            z-index: 1;
+            &--active{
+                position: relative;
+                z-index: 2;
+            }
+            &--left{
+                top: 0;
+                left: 10px;
+            }
+            &--right{
+                top: 0;
+                right: 10px;
+            }
+        }
     }
 }
