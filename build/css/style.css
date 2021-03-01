@@ -41,16 +41,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.section-aboutme__btn, .services__features-btn, .services__btn, .portfolio__btn {
+.section-aboutme__btn, .services__features-btn, .services__btn, .portfolio__btn, .blog__btn {
   display: inline-block;
   font-family: 'Josefin Sans';
   color: white;
   background-color: #27DEBF;
   border-radius: 3px; }
 
-.section-aboutme__h2, .services__h2 span, .services__h3 span, .portfolio__h2 span, .portfolio__h3 span, .testimonials__h2, .testimonials__h3 {
+.section-aboutme__h2, .services__h2 span, .services__h3 span, .portfolio__h2 span, .portfolio__h3 span, .testimonials__h2, .testimonials__h3, .blog__h2 span, .blog__h3 span {
   position: relative; }
-  .section-aboutme__h2:after, .services__h2 span:after, .services__h3 span:after, .portfolio__h2 span:after, .portfolio__h3 span:after, .testimonials__h2:after, .testimonials__h3:after {
+  .section-aboutme__h2:after, .services__h2 span:after, .services__h3 span:after, .portfolio__h2 span:after, .portfolio__h3 span:after, .testimonials__h2:after, .testimonials__h3:after, .blog__h2 span:after, .blog__h3 span:after {
     content: '';
     position: absolute;
     bottom: -0.1em;
@@ -430,3 +430,57 @@ li {
       .testimonials__img-element--right {
         top: 0;
         right: 10px; }
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .blog__h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #27DEBF;
+    margin-top: 50px; }
+  .blog__h3 {
+    font-size: 30px;
+    margin-top: 15px;
+    font-weight: 600; }
+  .blog__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px; }
+    .blog__content-offer {
+      width: 336px;
+      margin-left: 45px; }
+    .blog__content-textoffer {
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0px 8px 5px 5px rgba(0, 0, 0, 0.06);
+      position: relative;
+      z-index: 2;
+      bottom: 15px;
+      padding: 15px 20px 30px 20px; }
+    .blog__content-date {
+      color: #27DEBF;
+      font-size: 18px;
+      font-weight: 600; }
+    .blog__content-maintext {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #151D41; }
+    .blog__content-text {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #151D41; }
+    .blog__content-btn {
+      width: 110px;
+      margin-top: 60px;
+      color: #27DEBF; }
+    .blog__content-link {
+      color: #27DEBF;
+      margin-right: 10px; }
+  .blog__btn {
+    padding: 20px 50px;
+    margin-top: 50px; }

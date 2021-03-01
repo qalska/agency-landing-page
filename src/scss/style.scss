@@ -426,3 +426,70 @@ li {
         }
     }
 }
+.blog{
+    @include flex_column();
+    &__h2{
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $cyan-color;
+        margin-top: 50px;
+        span{
+            @extend %heading-bg;
+        }
+    }
+    &__h3{
+        font-size: 30px;
+        margin-top: 15px;
+        font-weight: 600;
+        span{
+            @extend %heading-bg;
+        }
+    }
+    &__content{
+        @include flex_center();
+        margin-top: 55px;
+        &-offer{
+            width: 336px;
+            margin-left: 45px;
+        }
+        &-textoffer{
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0px 8px 5px 5px rgba(0, 0, 0, 0.06);
+            position: relative;
+            z-index: 2;
+            bottom: 15px;
+            padding: 15px 20px 30px 20px;
+        }
+        &-date{
+            color: $cyan-color;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        &-maintext{
+            margin-top: 15px;
+            font-size: 14px;
+            color: $dark-blue;
+        }
+        &-text{
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: $dark-blue;
+        }
+        &-btn{
+            width: 110px;
+            margin-top: 60px;
+            color: $cyan-color;
+        }
+        &-link{
+            color: $cyan-color;
+            margin-right: 10px;
+        }
+    }
+    &__btn{
+        @extend %button;
+        padding: 20px 50px;
+        margin-top: 50px;
+    }
+}
