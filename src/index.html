@@ -293,7 +293,75 @@
         </div>
         <a href="#" class="blog__btn">View All</a>
     </section>
-
+    <footer class="form">
+        <div class="form__container">
+            <div class="form__h2"><span>contact me</span></div>
+            <div class="form__h3"><span>Send Us a Message</span></div>
+            <form action="#" class="form__register">
+                <div class="form__register-row">
+                    <input type="text" 
+                    name="name" 
+                    placeholder="Name" 
+                    class="form__register-input" 
+                    required>
+                    <input type="email" 
+                    name="email" 
+                    placeholder="Email" 
+                    class="form__register-input" 
+                    required>
+                </div>
+                <div class="form__register-row">
+                    <input type="tel" 
+                    name="tel" 
+                    placeholder="Phone#" 
+                    class="form__register-input" 
+                    required>
+                    <select name="budget" 
+                    class="form__register-input form__register-input--select">
+                        <option>Budget</option>
+                        <option value="less">less than $200</option>
+                        <option value="over">over $200</option>
+                    </select>
+                </div>
+                <input type="text" 
+                name="message" 
+                placeholder="Message" 
+                class="form__register-input form__register-input--msg" 
+                required>
+                <button type="submit" 
+                class="form__register-btn">Send Message</button>
+            </form>
+        </div>
+        <a href="#top" class="form__link">
+            <img src="img/arrow-top.svg" alt="" class="form__link-img">
+        </a>
+        <div class="form__footer">
+            <div class="form__footer-wrapper">
+                <div class="form__footer-column">
+                    <img src="img/footer-icon.svg" alt="OO" class="form__footer-column-icon">
+                    <p class="form__footer-column-text">Lorem ipsum dolor sit amet,Stet clita kasd gubergren, no sea takimata</p>
+                </div>
+                <div class="form__footer-element">
+                    <p class="form__footer-text">We are digital designer living in United States. <br> Apart from eating burger</p>
+                    <div class="form__footer-row">
+                        <div class="form__footer-block">
+                            <p class="form__footer-block-title">sent mail</p>
+                            <p class="form__footer-block-text">info@portfolio.com</p>
+                        </div>
+                        <div class="form__footer-block">
+                            <p class="form__footer-block-title">make call</p>
+                            <p class="form__footer-block-text">+123 456 7890</p>
+                        </div>
+                        <div class="form__footer-block">
+                            <p class="form__footer-block-title">get in touch</p>
+                            <p class="form__footer-block-text">123/A,</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="form__footer-rights">2019 All Rights Reserved</p>
+        </div>
+    </footer>
 
     <script src="/js/script.min.js"></script>
 </body>
